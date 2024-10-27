@@ -1,0 +1,53 @@
+O meu app.blade.php:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{asset('build/assets/app.525f5899.css')}}">
+</head>
+<body>
+    <div id="app">
+        @yield('content')
+    </div>
+    <script src="{{asset('build/assets/app.872ffc4c.js')}}"></script>
+</body>
+</html>
+e na página que eu vou abrir e o controller TestController são:
+
+<?php
+namespace App\Http\Controllers;
+class TestController extends Controller
+{
+    public function index()
+    {
+        return view('test');
+    }
+}
+@extends('layouts.app')
+@section('content')
+    <example-component></example-component>
+@endsection
+Sendo que a instalação seguindo esse link: laravel/ui - Packagist 2 com os seguintes passos a passos:
+1 - Depois da instalação do Laravel
+2 - composer require laravel/ui
+3 - php artisan ui vue
+4 - npm install
+5 - npm run build
+
+onde o número 5 gera na pasta /public/build/assets/ *.css e *.js que são colocados na página da seguinte forma:
+
+<link rel="stylesheet" href="{{asset('build/assets/app.525f5899.css')}}">
+e
+
+<script src="{{asset('build/assets/app.872ffc4c.js')}}"></script>
+
+e por isso vai funcionar assim:
+
+componente
+
+
+
