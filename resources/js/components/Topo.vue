@@ -39,14 +39,4 @@ export default {
     props: ['titulo', 'url']
 }
 
-const promise = new Promise((resolve, reject) => {
-setTimeout(() => resolve("Completed!"), 1000);
-});
-
-promise.then(data => {
-console.log(data);
-return "Success!";}).then(data => {
-console.log(data);
-});
-
 </script>
