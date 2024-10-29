@@ -4,6 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+const { default: Topo } = require('./components/Topo.vue');
+
 require('./bootstrap');
 
 window.Vue = require('vue').default;
@@ -14,6 +16,7 @@ window.Vue = require('vue').default;
  * components and automatically register them with their "basename".
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ * Eg. ./components/Topo.vue -> <topo></topo>
  */
 
 // const files = require.context('./', true, /\.vue$/i)

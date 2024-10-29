@@ -5147,41 +5147,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['titulo', 'url']
+});
+var promise = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    return resolve("Completed!");
+  }, 1000);
+});
+promise.then(function (data) {
+  console.log(data);
+  return "Success!";
+}).then(function (data) {
+  console.log(data);
 });
 
 /***/ }),
@@ -5198,6 +5177,8 @@ __webpack_require__.r(__webpack_exports__);
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+var _require = __webpack_require__(/*! ./components/Topo.vue */ "./resources/js/components/Topo.vue"),
+  Topo = _require["default"];
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js")["default"]);
 
@@ -5207,6 +5188,7 @@ window.Vue = (__webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js
  * components and automatically register them with their "basename".
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ * Eg. ./components/Topo.vue -> <topo></topo>
  */
 
 // const files = require.context('./', true, /\.vue$/i)
